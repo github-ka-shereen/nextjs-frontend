@@ -3,7 +3,7 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: 'Coding Resources',
+  title: 'NextJs App',
   description: 'PDF Coding Resources For Beginners',
 }
 
