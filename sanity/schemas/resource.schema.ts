@@ -2,7 +2,7 @@ const schema = {
   name: 'resource',
   title: 'Resource',
   type: 'document',
-  field: [
+  fields: [
     {
       name: 'title',
       title: 'Title',
@@ -26,7 +26,7 @@ const schema = {
       name: 'views',
       title: 'Views',
       type: 'number',
-      initialValue: '0',
+      initialValue: 0,
     },
     {
       name: 'poster',
@@ -43,7 +43,7 @@ const schema = {
       type: 'string',
       validation: (Rule: any) => Rule.required(),
       options: {
-        list: ['frontend', 'backend', 'next13', 'fullstack', 'other'],
+        list: ['frontend', 'backend', 'next 13', 'fullstack', 'other'],
       },
     },
   ],
