@@ -7,12 +7,13 @@ interface Props {
   title: string;
   image: string;
   downloadNumber: number;
+  downloadLink: string;
 }
 
-const ResourceCard = ({ id, title, downloadNumber, image }: Props) => {
+const ResourceCard = ({ id, title, downloadNumber, image, downloadLink }: Props) => {
   return (
     <Card className='w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]'>
-      <Link href={`/resource/${id}`}>
+      <Link href={downloadLink} target='_blank'>
         <CardHeader className='flex-center flex-col gap-2,5 !p-0'>
           <div className='h-fit w-full'>
             <Image
@@ -39,7 +40,8 @@ const ResourceCard = ({ id, title, downloadNumber, image }: Props) => {
         </div>
         <Link
           className='flex-center text-gradient_purple-blue body-semibold gap-1.5'
-          href={`/resource/${id}`}
+          href={downloadLink}
+          target='_blank'
         >
           Download Now
           <Image
